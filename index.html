@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiTube</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/icon.png" type="image/icon type">
+</head>
+
+<body onload="onInit()">
+    <header>
+        <img src="img/wikitube.png" class="logo" alt="" srcset="">
+        <form class="search" onsubmit="onSearch(event)">
+            <input type="text" name="search" placeholder="Search Youtube..." value="The Beatles">
+            <!-- <button>search</button> -->
+        </form>
+    </header>
+    <main class="main-container">
+        <section class="search-results">
+        </section>
+        <section class="video-play">
+            <iframe src="https://www.youtube.com/embed/A_MjCqQoLLA?controls=0"></iframe>
+        </section>
+    </main>
+    <section class="wiki-container">
+        <h2>Wikis</h2>
+        <section class="wiki-results">
+        </section>
+    </section>
+
+   
+    <script src="lib/axios.js"></script>
+
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/wikitube-service.js"></script>
+    <script src="js/wikitube-controller.js"></script>
+
+</body>
+
+</html>
